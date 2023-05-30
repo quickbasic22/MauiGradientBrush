@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiGradientBrush.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiGradientBrush"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Shell FlyoutBackdrop Demo">
+
+    <Shell.FlyoutBackdrop>
+        <LinearGradientBrush StartPoint="0,0"
+                    EndPoint="0,1">
+                                <GradientStop Color="#8A2387"
+                    Offset="0.4" />
+                                <GradientStop Color="#E94057"
+                    Offset="0.6" />
+                            <GradientStop Color="#F27121"
+                    Offset="1.0" /> 
+        </LinearGradientBrush>
+    </Shell.FlyoutBackdrop>
+    <ShellContent
+        Title="PathVariationsPage"
+        ContentTemplate="{DataTemplate local:PathVariationsPage}"
+        Route="PathVariationsPage" />
+    <ShellContent
+        Title="OneShotDateTimePage"
+        ContentTemplate="{DataTemplate local:OneShotDateTimePage}"
+        Route="OneShotDateTimePage" />
+    <ShellContent
+        Title="ClockPage"
+        ContentTemplate="{DataTemplate local:ClockPage}"
+        Route="ClockPage" />
+    <ShellContent
+        Title="NamedColor"
+        ContentTemplate="{DataTemplate local:NamedColor}"
+        Route="NamedColor" />
+    <ShellContent
+        Title="ArrayDemoPage"
+        ContentTemplate="{DataTemplate local:ArrayDemoPage}"
+        Route="ArrayDemoPage" />
+    <ShellContent
+        Title="Type Demo Page"
+        ContentTemplate="{DataTemplate local:TypeDemoPage}"
+        Route="TypeDemoPage" />
+    <ShellContent
+        Title="XAMLPratice"
+        ContentTemplate="{DataTemplate local:XAMLPratice}"
+        Route="XAMLPratice" />
+    <ShellContent
+        Title="QuaternionPage"
+        ContentTemplate="{DataTemplate local:QuaternionPage}"
+        Route="QuaternionPage" />
+
+    <ShellContent
+        Title="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="DifferentShapesPage"
+        ContentTemplate="{DataTemplate local:DifferentShapesPage}"
+        Route="DifferentShapesPage" />
+    <ShellContent
+        Title="MyDrawablePage"
+        ContentTemplate="{DataTemplate local:MyDrawablePage}"
+        Route="MyDrawablePage" />
+
+</Shell>

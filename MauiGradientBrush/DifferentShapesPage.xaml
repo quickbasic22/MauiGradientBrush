@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:MauiGradientBrush"
+             x:DataType="drawable:DifferentShapesPage"
+             x:Class="MauiGradientBrush.DifferentShapesPage"
+             Title="DifferentShapesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <drawable:StarDrawable x:Key="StarDrawable" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding Source={Reference MyGraphicsView}, Path=TranslationX}" FontSize="Large" />
+            <Label Text="{Binding Source={Reference MyGraphicsView}, Path=TranslationY}" FontSize="Large" />
+            <GraphicsView x:Name="MyGraphicsView" Drawable="{StaticResource StarDrawable}" WidthRequest="1600" HeightRequest="850" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

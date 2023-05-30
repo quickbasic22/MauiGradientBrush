@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:MauiGradientBrush"
+             x:Class="MauiGradientBrush.QuaternionPage"
+             x:Name="MyContentPage"
+             Title="QuaternionPage">
+    
+    <ContentPage.Resources>
+        <converters:RadiansToDegreesConverter x:Key="RadiansToDegreesConverter" />
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <Grid>
+            <BoxView x:Name="rotatingBoxView"
+                 BackgroundColor="Red"
+                 Color="Red"   
+                 WidthRequest="100"
+                 HeightRequest="100"
+                 TranslationX="{Binding BoxViewTranslationX}"
+                 TranslationY="{Binding BoxViewTranslationY}"
+                 Rotation="{Binding BoxViewRotation}" />
+        </Grid>
+    </ScrollView>
+    
+</ContentPage>
